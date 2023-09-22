@@ -189,6 +189,15 @@ $(document).ready(function () {
       // Reproduce el sonido
 
       mover.play();
+      if (selectedPiece.hasClass('red')) {
+        if (targetRow === 0 && !selectedPiece.hasClass('king')) {
+          selectedPiece.addClass('king');
+        }
+      } else {
+        if (targetRow === 7 && !selectedPiece.hasClass('king')) {
+          selectedPiece.addClass('king');
+        }
+      }
       // Deseleccionar la ficha
       selectedPiece.removeClass('selected');
       selectedPiece = null;
@@ -198,9 +207,8 @@ $(document).ready(function () {
       // Eliminar elementos circulares de las casillas disponibles
       $('.highlight').remove();
     }
-    if (targetRow === 0 && !targetPiece.hasClass('king')) {
-      targetPiece.addClass('king');
-    }
+    
+    
 
   });
 });
