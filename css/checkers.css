@@ -31,25 +31,34 @@
     margin: 3px;
     background-image: url(../assets/img/fichaver.jpg);
     border: 2px solid rgb(102, 102, 102);
+    animation: all ease 0.3s;
 }
 
 .red {
     margin: 3px;
     background-image: url(../assets/img/wood.jpg);
     border: 2px solid rgb(48, 25, 3);
+    animation: all ease 0.3s;
 }
  /* Estilos de las fichas coronadas */
  .king {
     border: 2px solid rgba(128, 111, 20, 0.616);
+    animation: all ease 0.3s;
 }
 
 .selected {
     border-color: white;
+    transition: all ease 0.1s;
 }
 
 .highlight {
-    width: 10px;
-    height: 10px;
-    background-color: white;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    filter: opacity(0.8);
     display: flex;
+    padding: 7px;
+    margin: 17px;
+    transition: all ease 0.4s;
     }
