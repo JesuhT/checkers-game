@@ -50,6 +50,9 @@
 }
  /* Estilos de las fichas coronadas */
  .king {
+    background-image: url(../assets/img/fichak.webp);
+    background-size: cover;
+    background-position: center;
     border: 2px solid rgba(128, 111, 20, 0.616);
     animation: all ease 0.3s;
 }

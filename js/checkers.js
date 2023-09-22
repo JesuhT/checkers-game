@@ -101,7 +101,6 @@ $(document).ready(function () {
                 nextCell.append('<div class="highlight" style="z-index:999;"></div>');
                 console.log("deberia");
               }
-
             }
 
           }
@@ -198,6 +197,9 @@ $(document).ready(function () {
       currentPlayer = currentPlayer === 'blackpiece' ? 'red' : 'blackpiece';
       // Eliminar elementos circulares de las casillas disponibles
       $('.highlight').remove();
+    }
+    if (targetRow === 0 && !targetPiece.hasClass('king')) {
+      targetPiece.addClass('king');
     }
 
   });
