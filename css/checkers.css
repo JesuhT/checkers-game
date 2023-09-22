@@ -1,44 +1,52 @@
 
 .board {
     display: grid;
-    grid-template-columns: repeat(8, 50px);
+    grid-template-columns: repeat(8, 55px);
     
 }
 .cell {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     background-color: #eee;
     background-image: url(../assets/img/wood.jpg);
     border: 0.4px solid #613c19;
+    background-size: cover;
+    background-position: center;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
     background-size: cover;
 }
 .piece {
-    width: 40px;
-    height: 40px;
+    width: 9vw;
+    height: 9vw;
     
     border-radius: 50%;
-    margin: 5px;
+    margin: 2vw;
     cursor: pointer;
 }
 .black {
     background-image: url(../assets/img/blackcell.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .blackpiece {
     margin: 3px;
-    background-image: url(../assets/img/fichaver.jpg);
-    border: 2px solid rgb(102, 102, 102);
+    background-image: url(../assets/img/ficha.jpg);
+    border: 2px solid rgb(34, 34, 34);
+    background-size: cover;
+    background-position: center;
     animation: all ease 0.3s;
 }
 
 .red {
     margin: 3px;
-    background-image: url(../assets/img/wood.jpg);
+    background-image: url(../assets/img/ficha.png);
     border: 2px solid rgb(48, 25, 3);
     animation: all ease 0.3s;
+    background-size: cover;
+    background-position: center;
 }
  /* Estilos de las fichas coronadas */
  .king {
@@ -55,8 +63,9 @@
     width: 1px;
     height: 1px;
     border-radius: 50%;
-    background-color: rgb(255, 255, 255);
+    background-image: url(../assets/img/x.svg);
     filter: opacity(0.8);
+    background-position: center;
     display: flex;
     padding: 7px;
     margin: 17px;

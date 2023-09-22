@@ -27,14 +27,17 @@ main {
     padding: 20px;
 }
 
-.description {
-    background-color: #ffffff;
-    width: 100%;
-    height: 10vh;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+#icon {
+    width: 4vw;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 4px;
 }
+
+#icon-b {
+
+}
+
 
 .lista form #searchbox {
     width: 160%;
@@ -54,6 +57,7 @@ main {
 }
 body {
     background-color: #ffffff;
+    overflow-x: hidden;
 }
 .main-container {
     display: flex;
@@ -77,14 +81,20 @@ body {
     justify-content: center;
     overflow: hidden;
     margin: 0 45vh;
-    height: 80vh;
+    height: 90vh;
     background-color: #2f3237;
+    background-image: url(../assets/img/back.png);
+    background-position: center;
+    background-size: cover;
+    z-index: 1000;
+    
 }
 
 .box {
     width: 430px;
     height: 430px;
     background-color: #2f3237;
+    
 }
 
 .games-side {
@@ -99,7 +109,7 @@ body {
 }
 
 #game-player-bg {
-    height: 100vh;
+    height: 111.3vh;
     width: 100%;
     overflow: hidden;
     overflow-y: hidden;
@@ -111,8 +121,14 @@ body {
     z-index: -1;
 }
 
+iframe {
+    position: relative;
+    top: -5%;
+    left: -2%;
+}
+
 #game-player-bg div {
-    width: 120%;
+    width: 110%;
     height: 150%;
     position: absolute;
     opacity: 1;
@@ -126,7 +142,7 @@ body {
     line-height: 1.4rem;
 }
 .right span {
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.4rem;
 }
 
@@ -140,4 +156,32 @@ body {
     flex: 1;
     line-height: 4rem;
     padding: 28px 40px;
+}
+
+
+.description {
+    background-color: #ffffff;
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    line-height: 1rem;
+    padding: 4px 0;
+
+}
+
+.description span {
+    font-size: 12px;
+}
+
+.description h1 {
+    font-weight: 500;
+}
+
+.description ul {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20vw;
+    color: rgb(175, 155, 41);
 }
