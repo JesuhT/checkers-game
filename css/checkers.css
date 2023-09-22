@@ -56,6 +56,14 @@
     border: 2px solid rgba(128, 111, 20, 0.616);
     animation: all ease 0.3s;
 }
+.kingblack {
+    background-image: url(../assets/img/fichagray.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgba(128, 111, 20, 0.616);
+    animation: all ease 0.3s;
+    filter: grayscale(70%);
+}
 
 .selected {
     border-color: white;

@@ -194,8 +194,8 @@ $(document).ready(function () {
           selectedPiece.addClass('king');
         }
       } else {
-        if (targetRow === 7 && !selectedPiece.hasClass('king')) {
-          selectedPiece.addClass('king');
+        if (targetRow === 7 && !selectedPiece.hasClass('kingblack')) {
+          selectedPiece.addClass('kingblack');
         }
       }
       // Deseleccionar la ficha
