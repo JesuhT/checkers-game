@@ -92,29 +92,20 @@ $(document).ready(function () {
             console.log('no ocupado');
           } else if (!isSameColor) {
             // Si hay una ficha en la casilla diagonal, verifica la siguiente casilla en la misma dirección
-              console.log('no mismo color');
-              let nextRow = (diagonal.row)+1;
-              let nextCol = (diagonal.col )+1;
-              const nextCell = board.find('.cell').filter(function () {
-                  return $(this).data('row') === nextRow+1 && $(this).data('col') === nextCol+1;
-              });
-              console.log(nextRow);
-              console.log(nextCol);
+            const nextRow = 2 * diagonal.row - row;
+            const nextCol = 2 * diagonal.col - col;
+            const nextCell = board.find('.cell').eq(nextRow * 8 + nextCol);
+            if (nextCell.length && !nextCell.children().hasClass('piece')) {
+              // Agrega un elemento circular para mostrar la casilla disponible para saltar
+              if (nextCell.hasClass('black')) {
+                nextCell.append('<div class="highlight" style="z-index:999;"></div>');
+                console.log("deberia");
+              }
 
-              if (!nextCell.length || !nextCell.children().hasClass('piece')) {
-                  // Agregar un elemento circular para mostrar la casilla disponible
-                  diagonalCell.append('<div class="highlight" style="z-index:999;"></div>');
-              
             }
+
           }
         }
-        // Verificar si la casilla es válida y está vacía
-        // if (cell.length && !cell.children().hasClass('piece')) {
-        //   // Agregar un elemento circular para mostrar la casilla disponible
-        //   if (cell.hasClass('black')) {
-        //     cell.append('<div class="highlight" style="z-index:999;"></div>');
-        //   }
-        // } 
 
 
       }
@@ -127,26 +118,31 @@ $(document).ready(function () {
 
       // Recorrer las casillas diagonales
       for (const diagonal of diagonalsred) {
-        const cell = board.find('.cell').eq(diagonal.row * 8 + diagonal.col);
+        const diagonalCell = board.find('.cell').filter(function () {
+          return $(this).data('row') === diagonal.row && $(this).data('col') === diagonal.col;
+        });
+        console.log(diagonalCell.children());
+        const isSameColor = diagonalCell.children().hasClass(pieceColor);
+        if (diagonalCell.length) {
+          const isOccupied = diagonalCell.children().hasClass('piece');
+          if (!isOccupied) {
+            // Agregar un elemento circular para mostrar la casilla disponible
+            diagonalCell.append('<div class="highlight" style="z-index:999;"></div>');
+            console.log('no ocupado');
+          } else if (!isSameColor) {
+            // Si hay una ficha en la casilla diagonal, verifica la siguiente casilla en la misma dirección
+            const nextRow = 2 * diagonal.row - row;
+            const nextCol = 2 * diagonal.col - col;
+            const nextCell = board.find('.cell').eq(nextRow * 8 + nextCol);
+            if (nextCell.length && !nextCell.children().hasClass('piece')) {
+              // Agrega un elemento circular para mostrar la casilla disponible para saltar
+              if (nextCell.hasClass('black')) {
+                nextCell.append('<div class="highlight" style="z-index:999;"></div>');
+                console.log("deberia");
+              }
 
-        // Verificar si la casilla es válida y está vacía
-        if (cell.length && !cell.children().hasClass('piece')) {
-          // Agregar un elemento circular para mostrar la casilla disponible
-          if (cell.hasClass('black')) {
-            cell.append('<div class="highlight" style="z-index:999;"></div>');
-          }
-        } else if (cell.length) {
-          // Si hay una ficha en la casilla diagonal, verifica la siguiente casilla en la misma dirección
-
-          const nextRow = 2 * diagonal.row - row;
-          const nextCol = 2 * diagonal.col - col;
-          const nextCell = board.find('.cell').eq(nextRow * 8 + nextCol);
-          if (nextCell.length && !nextCell.children().hasClass('piece')) {
-            // Agrega un elemento circular para mostrar la casilla disponible para saltar
-            if (nextCell.hasClass('black')) {
-              nextCell.append('<div class="highlight" style="z-index:999;"></div>');
-              console.log("deberia");
             }
+
           }
         }
 
