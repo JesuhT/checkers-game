@@ -2,129 +2,90 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juegos</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/mainpage.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juegos</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/mainpage.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul class="lista">
-
-                <li class="items">
-                    <form action="#">
-                        <input type="text" name="busqueda" placeholder="Que quieres jugar hoy?" id="searchbox">
-                    </form>
-                </li>
-                <li class="items"></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div id="game-player-bg" style="background-color: rgb(7, 10, 6); display: block;">
-            <div
-                style="background-image: radial-gradient(farthest-corner at 50% 50%, rgba(128,135,39, 1), rgba(128,135,39, 0), rgba(128,135,39, 0)); ">
-            </div>
-            <div
-                style="background-image: radial-gradient(farthest-corner at 20% 20%, rgba(185,60,33, 1), rgba(185,60,33, 0), rgba(185,60,33, 0)); ">
-            </div>
-            <div
-                style="background-image: radial-gradient(farthest-corner at 70% 70%, rgba(211,169,104, 1), rgba(211,169,104, 0), rgba(211,169,104, 0)); ">
-            </div>
+  <header>
+    <nav>
+      <div class="logo"></div>
+      <ul class="options">
+        <li class="items">
+          <img src="" alt="" srcset="">
+          <h1></h1>
+        </li>
+        <li class="items">
+          <img src="" alt="" srcset="">
+          <h1></h1>
+        </li>
+        <li class="items">
+          <img src="" alt="" srcset="">
+          <h1></h1>
+        </li>
+        <li class="items">
+          <img src="" alt="" srcset="">
+          <h1></h1>
+        </li>
+        <li class="items"></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="description">
+    </div>
+    <div class="main-container">
+      <div class="right">
+        <div class="page">
+          <div class="pf-player oponent">
+            <img class="pfp" src="assets/img/pfp.png" alt="pfp" srcset="">
+            <h3>Oponent</h3>
+          </div>
+          <div class="box">
+            <iframe src="checkers.html" frameborder="0" width="600" height="550"></iframe>
+          </div>
+          <div class="pf-player you">
+            <img class="pfp" src="assets/img/pfp.png" alt="pfp" srcset="">
+            <h3>You</h3>
+          </div>
         </div>
-        <div class="description">
-            <div id="icon-b" class="items">
-                <img id="icon" src="assets/img/icon.jpg" alt="" srcset="">
-            </div>
-            <h1>Juego de Damas <br> <span>Juega a damas online totalmente gratis</span></h1>
-            <ul id="stars">
-                <li><i class='bx bxs-star'></i></li>
-                <li><i class='bx bxs-star'></i></li>
-                <li><i class='bx bxs-star'></i></li>
-                <li><i class='bx bxs-star'></i></li>
-                <li><i class='bx bxs-star-half'></i></li>
-            </ul>
-
-        </div>
-        <div class="main-container">
-            <div class="right">
-
-                <div class="page">
-                    <div class="box">
-
-                        <iframe src="checkers.html" frameborder="0" width="500" height="600"></iframe>
-                    </div>
-                </div>
-                <div class="text">
-                    <div class="text-2">
-                        <h2>Juega damas gratis</h2>
-                        <p><span>Tablero:</span> El tablero de damas es un cuadrado de 64 casillas dispuestas en un
-                            patrón de
-                            8x8. Las casillas se alternan en color, generalmente blanco y negro, lo que crea un patrón a
-                            cuadros.</p>
-
-                        <p><span>Fichas:</span> El juego de damas se juega con fichas que inicialmente se colocan en las
-                            casillas de la fila más cercana a cada jugador. Cada jugador tiene 12 fichas al comienzo del
-                            juego,
-                            que suelen ser de dos colores diferentes, como rojo y negro o blanco y negro.</p>
-
-                        <p><span>Objetivo:</span> El objetivo principal del juego de damas es capturar todas las fichas
-                            del
-                            oponente o dejarlo sin movimientos legales.</p>
-
-                        <p><span>Movimiento de las Fichas:</span> Las fichas se mueven en diagonal hacia adelante, una
-                            casilla a
-                            la vez, en las casillas oscuras del tablero. Si una casilla adyacente en diagonal está
-                            ocupada por
-                            una ficha del oponente y la siguiente casilla en diagonal está vacía, la ficha puede saltar
-                            sobre la
-                            ficha del oponente capturándola. Esto se llama "captura" y es una parte fundamental del
-                            juego.</p>
-
-                        <p><span>Coronación:</span> Cuando una ficha alcanza la fila más alejada del tablero en el lado
-                            opuesto,
-                            se "corona" y se convierte en una "dama" o "rey". Una dama puede moverse en diagonal en
-                            cualquier
-                            dirección y es una ficha más poderosa que las fichas normales.</p>
-
-                        <p><span>Turnos:</span> Los jugadores se turnan para mover sus fichas. El jugador que tiene las
-                            fichas
-                            de un color comienza el juego.</p>
-
-                        <p><span>Fin del Juego:</span> El juego puede terminar de dos formas: cuando un jugador captura
-                            todas
-                            las fichas del oponente o cuando un jugador no puede realizar ningún movimiento legal. En
-                            ambos
-                            casos, el jugador que logra esta condición gana la partida.</p>
-
-                        <p>El juego de damas es conocido por su simplicidad y profundidad estratégica. Aunque las reglas
-                            básicas
-                            son sencillas, se pueden desarrollar complejas estrategias a medida que el juego avanza. El
-                            juego de
-                            damas es un pasatiempo popular que se juega en todo el mundo y ha sido objeto de numerosos
-                            torneos y
-                            competiciones a lo largo de la historia.</p>
-                    </div>
-                    <div class="games-side">
-                        <ul>
-                            <li class="card"></li>
-                            <li class="card"></li>
-                            <li class="card"></li>
-                            <li class="card"></li>
-                            <li class="card"></li>
-                            <li class="card"></li>
-                            <li class="card"></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </main>
+      </div>
+      <div class="play">
+        <div id="cicle"></div>
+        <div class="top">
+        <h1>Play checker</h1>
+        <img src="assets/svg/playwhite.svg" alt="" srcset="">
+      </div>
+        <ul>
+          <li>
+            <svg class="icono" width="90" height="90" fill="none" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 94 94">
+              <path
+                d="m67.85 30.08-12.87 2.44L67.94 7.05V3.19L65.74 0 48.56 6.43 19.94 48.36l2.21 3.19h12.33l-8.11 35.26 2.2 3.19H32l38.06-52.87v-3.86l-2.21-3.19z"
+                fill="#E3AA24" />
+              <path d="M65.74 0v3.86L52.4 30.08h15.45v3.86L29.8 86.81h-3.43l7.71-38.45H19.94L31.89 0h33.85z"
+                fill="#F7C631" />
+              <path d="M41.55 32.79H62.7L34.04 63.95l7.51-31.16zM34.54 3.1H58.4L26.07 38.25 34.54 3.1z"
+                fill="#FCE26A" />
+            </svg>
+            <h2>Play Online</h2>
+          </li>
+          <li>
+            <svg width="90" height="90" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94 94"><path d="M53.23 47.38H36.77V59.3h16.46V47.38z" fill="#486688"/><path d="M68.95 6.75h-47.9a6.68 6.68 0 0 0-6.68 6.68v28.8a6.68 6.68 0 0 0 6.68 6.68h47.9a6.68 6.68 0 0 0 6.68-6.68v-28.8a6.68 6.68 0 0 0-6.68-6.68z" fill="#B3ACA8"/><path d="M66.58 6.75H23.42a6.35 6.35 0 0 0-6.35 6.35v29.46a6.35 6.35 0 0 0 6.35 6.35h43.16a6.35 6.35 0 0 0 6.35-6.35V13.1a6.35 6.35 0 0 0-6.35-6.35z" fill="#E8E6E1"/><path d="M67.72 11.4H23.08a1.98 1.98 0 0 0-1.98 1.98v28.36a1.98 1.98 0 0 0 1.98 1.98h44.64a1.98 1.98 0 0 0 1.98-1.98V13.38a1.98 1.98 0 0 0-1.98-1.98z" fill="#749BBF"/><path d="M45 83.25c12.07 0 22.95-5.08 30.63-13.22v-5.47a6.68 6.68 0 0 0-6.68-6.68h-47.9a6.68 6.68 0 0 0-6.68 6.68v5.47C22.05 78.16 32.93 83.25 45 83.25z" fill="#B3ACA8"/><path d="M66.57 57.88H23.43c-3.51 0-6.35 2.84-6.35 6.35v8.42c7.44 6.59 17.21 10.59 27.93 10.59 10.72 0 20.49-4.01 27.93-10.59v-8.42c0-3.51-2.84-6.35-6.35-6.35h-.02z" fill="#E8E6E1"/><path d="M48.63 68.23c.24-1.77.23-3.51 0-5.17-.18-1.32-1.36-2.27-2.69-2.27H24.27c-2.09 0-3.78 1.69-3.78 3.78v4.59c0 1.18.6 2.27 1.58 2.93 8.12 5.52 16.18 6.76 19.39 7.04.93.08 1.85-.3 2.45-1.02 2.29-2.73 4.25-6.38 4.73-9.89l-.01.01z" fill="#fff"/><path d="M75.63 19.02h6.43c1.62 0 2.93 1.32 2.93 2.93V34.4c0 1.62-1.32 2.93-2.93 2.93h-6.43V19.01v.01zM14.37 37.33H7.94c-1.62 0-2.93-1.32-2.93-2.93V21.95c0-1.62 1.32-2.93 2.93-2.93h6.43v18.32-.01z" fill="#486688"/><path d="M46 13.44a2.67 2.67 0 0 0-1.52-2.04h-21.4c-.1 0-.2.02-.3.03a2 2 0 0 0-1.69 1.95v20.3c.42.51 1.02.86 1.71.93 1.72.19 6.14.14 7.98-.19 7.93-1.43 14.13-7.87 15.22-15.85.24-1.76.23-3.47 0-5.12v-.01z" fill="#AED0F0"/></svg>
+            <h2>Computer</h2>
+          </li>
+          <li>
+            <svg width="90" height="90" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94 94"><g clip-path="url(#a)"><path d="M78.1 16v-.16C78.01 7.08 70.89 0 62.11 0c-8.78 0-15.9 7.08-15.99 15.84h-.01v24.31c0 8.83 7.16 15.99 16 15.99S78.1 48.98 78.1 40.15V15.99 16z" fill="#9D6C3E"/><path d="M71 33.15H53v21.67h18V33.15z" fill="#D5A47D"/><path d="M76.87 22.65a2.29 2.29 0 0 0-1.17-1.89V18.2c0-1.23-.98-2.23-2.21-2.27l-3.55-1.42-2.59 1.41H50.67c-1.26 0-2.28 1.02-2.28 2.28v2.56c-.67.37-1.13 1.08-1.16 1.89v4.64c0 1.24 1 2.25 2.24 2.27.67 5.42 6.41 14.04 12.58 14.04s11.01-8.36 12.58-14.04a2.275 2.275 0 0 0 2.24-2.27v-4.64z" fill="#E3C29C"/><path d="M61.62 4.04c-4.86 0-7.96 1.87-8.77 2.42-4.97 3.32-4.55 10.28-4.55 13.15 0 3.46 2.8 6.27 6.26 6.27-1.16 0-2.11-.95-2.11-2.11s.94-2.11 2.11-2.11h7.06c3.94 0 7.28-2.59 8.41-6.16.45.26 4.61.76 4.61 14.08 0 2.89 2.89 2.37 2.89-8.54 0-3.18-2.6-9.44-2.6-9.44s-3.44-7.56-13.31-7.56z" fill="#9D6C3E"/><path d="M39.87 69.17c-1.26 0-2.18-.31-2.79-.94-1.4-1.45-1.3-4.53-1.24-6.56.01-.42.03-.8.03-1.12 0-2.89 1.71-5.52 4.35-6.7l.07-.03 11.54-6.36c1.57 4.13 5.57 7.01 10.17 7.01s8.6-2.88 10.16-7.01l11.54 6.36.07.03a7.352 7.352 0 0 1 4.35 6.7c0 .32.01.7.03 1.12.07 2.04.17 5.11-1.24 6.56-.61.63-1.52.94-2.79.94H39.87z" fill="#807B76"/><path d="M51.03 49.98c2.21 3.8 6.34 6.31 10.97 6.31 4.63 0 8.76-2.51 10.97-6.31l9.79 5.39.13.07.14.06c1.99.89 3.27 2.87 3.27 5.04 0 .34.01.74.03 1.18.05 1.41.14 4.34-.73 5.24-.31.32-.98.39-1.48.39H39.87c-.51 0-1.17-.07-1.48-.39-.87-.89-.77-3.83-.73-5.24.01-.44.03-.84.03-1.18 0-2.18 1.28-4.15 3.27-5.04l.14-.06.13-.07 9.79-5.39m19.95-5.23a9.045 9.045 0 0 1-8.98 7.9c-4.61 0-8.42-3.44-8.98-7.9-.04 0-.07.02-.1.03l-13.44 7.4c-3.2 1.43-5.43 4.64-5.43 8.36 0 2.92-1.05 10.44 5.82 10.44h44.25c6.87 0 5.82-7.52 5.82-10.44 0-3.72-2.23-6.93-5.43-8.36l-13.44-7.4s-.06-.02-.1-.03h.01z" fill="#807B76"/><path d="m51.55 67.69-9.18-5.84s1.39-2.16 2.28-5.7c.14-.55 2.98-.83 2.98-4.59 0-.6.13-2.19.22-3.99l-8.38 4.61c-3.2 1.43-5.43 4.64-5.43 8.36 0 2.92-1.05 10.44 5.82 10.44h16.4c-1.61-1.79-3.45-2.73-4.72-3.3l.01.01z" fill="#4A4743"/><path d="M52.27 20.81c-3.36 2.61-5.03 2.63-5.03 6.49 0 3.86-.9-3.88-.9-3.88L47.83 18l4.43 2.8.01.01z" fill="#9D6C3E"/><path d="M37.07 58.68H18.95v19.14h18.12V58.68z" fill="#6B4D3A"/><path d="M50.13 90c6.87 0 5.82-7.52 5.82-10.44 0-3.72-2.23-6.93-5.43-8.36l-13.44-7.4s-.06-.02-.1-.03a9.045 9.045 0 0 1-8.98 7.9c-4.61 0-8.42-3.44-8.98-7.9-.04 0-.07.02-.1.03L5.48 71.2a9.153 9.153 0 0 0-5.42 8.36C.06 82.48-.99 90 5.88 90h44.25z" fill="#87CBE3"/><path d="M14.36 49.99c.52 9.83 6.42 17.6 13.64 17.6 7.22 0 13.13-7.77 13.65-17.6.02 0-.53-6.84-.53-6.84C39.43 35.32 34.2 29.6 28 29.6c-6.2 0-11.43 5.72-13.12 13.55l-.53 6.84h.01z" fill="#8D694B"/><path d="M43.98 34.02c-.04-7.57-7.17-13.69-15.97-13.69s-15.93 6.12-15.97 13.69v11.46h4.57v-9.19h11.41l1.97-5.62 3.87 1.14c.75 1.49 2.29 2.53 4.07 2.53v4.38h1.51v6.76H44V34.02h-.02z" fill="#4A4743"/><path d="M37.91 27.64c-.86 0-1.66.25-2.35.67-1.04-3.19-4.02-5.49-7.55-5.49-4.4 0-7.96 3.57-7.96 7.96 0 .49.05.96.14 1.43h-5.87v6.52h13.69a7.93 7.93 0 0 0 6.55-3.44c.84.91 2.03 1.5 3.36 1.5 2.53 0 4.57-2.04 4.57-4.57 0-2.53-2.04-4.57-4.57-4.57l-.01-.01z" fill="#4A4743"/><path d="M41.7 43.3v-4.24c0-1.25-1.03-2.28-2.29-2.28h-2.28l-3.7 2.16c-7.05-.09-16.15-.21-16.84-.21-1.26 0-2.28 1.03-2.28 2.29v2.28c-1.26 0-2.28 1.03-2.28 2.28v4.57c0 1.25 1.02 2.28 2.28 2.28h27.4c1.26 0 2.28-1.02 2.28-2.28v-4.57c0-1.25-1.02-2.28-2.28-2.28h-.01z" fill="#8D694B"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h90v90H0z"/></clipPath></defs></svg>
+            <h2>Play with friend</h2>
+          </li>
+        </ul>
+      </div>
+      <div class="left"></div>
+    </div>
+  </main>
 </body>
 
 </html>

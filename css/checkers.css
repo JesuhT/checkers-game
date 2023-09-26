@@ -1,63 +1,66 @@
 
 .board {
     display: grid;
-    grid-template-columns: repeat(8, 55px);
-    
+    grid-template-columns: repeat(8, 65px);
 }
 .cell {
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     background-color: #eee;
-    background-image: url(../assets/img/wood.jpg);
-    border: 0.4px solid #613c19;
+    background-image: url(../assets/img/square.jpg);
+    border: 3px solid rgba(168, 130, 24, 0.216);
     background-size: cover;
     background-position: center;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
     background-size: cover;
+    filter: brightness(90%);
+    align-items: center;
+    justify-content: center;
 }
 .piece {
-    width: 9vw;
-    height: 9vw;
-    
+    display: flex;
+    position: relative;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
-    margin: 2vw;
     cursor: pointer;
+    background-image: url(../assets/img/square.jpg);
+    background-size: cover;
+    background-position: center;
 }
 .black {
-    background-image: url(../assets/img/blackcell.jpg);
+    background-image: url(../assets/img/square-black.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .blackpiece {
-    margin: 3px;
-    background-image: url(../assets/img/ficha.jpg);
-    border: 2px solid rgb(34, 34, 34);
+    background-image: url(../assets/img/piece-black.svg);
+    border: 2px solid rgba(128, 111, 20, 0.616);
     background-size: cover;
     background-position: center;
     animation: all ease 0.3s;
 }
 
 .red {
-    margin: 3px;
-    background-image: url(../assets/img/ficha.png);
-    border: 2px solid rgb(48, 25, 3);
+    background-image: url(../assets/img/piece.svg);
+    border: 2px solid rgba(128, 111, 20, 0.616);
     animation: all ease 0.3s;
     background-size: cover;
     background-position: center;
 }
  /* Estilos de las fichas coronadas */
  .king {
-    background-image: url(../assets/img/fichak.webp);
+    background-image: url(../assets/img/king-piece.svg);
     background-size: cover;
     background-position: center;
     border: 2px solid rgba(128, 111, 20, 0.616);
     animation: all ease 0.3s;
 }
 .kingblack {
-    background-image: url(../assets/img/fichagray.jpg);
+    background-image: url(../assets/img/king-piece-black.svg);
     background-size: cover;
     background-position: center;
     border: 2px solid rgba(128, 111, 20, 0.616);
@@ -78,7 +81,7 @@
     filter: opacity(0.8);
     background-position: center;
     display: flex;
-    padding: 7px;
+    padding: 17px;
     margin: 17px;
-    transition: all ease 0.4s;
+    animation: all ease 1s;
     }

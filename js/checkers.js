@@ -70,6 +70,11 @@ $(document).ready(function () {
 
     // Definir las posiciones de las casillas diagonales
     if (currentPlayer == 'blackpiece') {
+      if (selectedPiece.hasClass('kingblack')) {
+        
+      } else {
+
+      
       const diagonalsblack = [
 
         { row: row + 1, col: col - 1 },//enfrente izquierda
@@ -106,9 +111,12 @@ $(document).ready(function () {
           }
         }
 
-
+      }
       }
     } else {
+      if (selectedPiece.hasClass('king')) {
+        
+      } else {
       const diagonalsred = [
         { row: row - 1, col: col - 1 },//Enfrente izquierda
         { row: row - 1, col: col + 1 },//Enfrente derecha
@@ -144,7 +152,7 @@ $(document).ready(function () {
 
           }
         }
-
+        }
       }
     }
   }
@@ -191,11 +199,13 @@ $(document).ready(function () {
       mover.play();
       if (selectedPiece.hasClass('red')) {
         if (targetRow === 0 && !selectedPiece.hasClass('king')) {
+          promote.play();
           selectedPiece.addClass('king');
         }
       } else {
         if (targetRow === 7 && !selectedPiece.hasClass('kingblack')) {
           selectedPiece.addClass('kingblack');
+          promote.play();
         }
       }
       // Deseleccionar la ficha
@@ -207,8 +217,5 @@ $(document).ready(function () {
       // Eliminar elementos circulares de las casillas disponibles
       $('.highlight').remove();
     }
-    
-    
-
   });
 });
