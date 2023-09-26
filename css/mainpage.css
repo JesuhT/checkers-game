@@ -109,6 +109,10 @@ img {
   z-index: 5;
 }
 
+.play ul .item:hover {
+  background-color: #41443a;
+}
+
 #cicle {
   position: relative;
   background-color: #2f3237;
