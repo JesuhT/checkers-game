@@ -2,7 +2,7 @@
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 511.982 511.982" xml:space="preserve">
-<rect x="42.656" y="85.332" style="fill:#965353;" width="426.67" height="426.65"/>
+
 <rect x="42.656" y="319.992" style="fill:#A85D5D;" width="106.67" height="106.67"/>
 <rect x="149.329" y="319.992" style="fill:#FFD2A6;" width="106.65" height="106.67"/>
 <rect x="255.979" y="319.992" style="fill:#A85D5D;" width="106.66" height="106.67"/>
@@ -25,8 +25,6 @@
 <rect x="149.329" style="fill:#A85D5D;" width="106.65" height="106.66"/>
 <rect x="255.979" style="fill:#FFD2A6;" width="106.66" height="106.66"/>
 <rect x="362.639" style="fill:#A85D5D;" width="106.68" height="106.66"/>
-<path style="fill:#FFCE54;" d="M263.525,472.437c4.171,4.172,4.171,10.922,0,15.094c-4.156,4.156-10.923,4.156-15.078,0
-	c-4.172-4.172-4.172-10.922,0-15.094C252.602,468.281,259.369,468.281,263.525,472.437z"/>
 <g>
 	<path style="fill:#ED5564;" d="M127.982,53.334c0,17.672-14.312,31.999-31.999,31.999c-17.672,0-31.999-14.327-31.999-31.999
 		c0-17.679,14.327-31.999,31.999-31.999C113.67,21.336,127.982,35.656,127.982,53.334z"/>

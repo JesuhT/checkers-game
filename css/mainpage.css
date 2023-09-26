@@ -16,7 +16,7 @@ body {
 }
 
 nav {
-  width: 10vw;
+  width: max-content;
   height: 100vh;
   background-color: #2f3237;
 }
@@ -31,7 +31,7 @@ main {
   align-items: center;
   justify-content: center;
   line-height: 1.5rem;
-  padding: 20px;
+  width: 100%;
 }
 
 .main-container {
@@ -60,22 +60,6 @@ main {
   line-height: 1.4rem;
 }
 
-.left {
-  width: 20vw;
-
-}
-
-.play {
-  width: 26vw;
-  background-color: #36393f;
-  height: 60vh;
-  border-radius: 16px;
-  z-index: -2;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
 .pf-player {
   display: flex;
   padding-left: 1vw;
@@ -98,6 +82,51 @@ img {
   width: 90px;
 }
 
+.top {
+  text-align: center;
+}
+.top h3,
+.top img {
+  margin: auto;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  z-index: 9;
+}
+
+.container-play {
+  width: 30vw;
+  background-color: #36393f;
+  height: 70vh;
+  border-radius: 16px;
+  align-items: center;
+  justify-content: center;
+  display: relative;
+  overflow: hidden;
+}
+
+.container-play #cicle {
+  position: relative;
+  background-color: #2f3237;
+  border-radius: 50%;
+  width: 30vw;
+  height: 30vw;
+  margin: auto;
+  margin-top: -60%;
+  margin-bottom: -40%;
+  z-index: 1;
+}
+.play {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  padding: 15%;
+  align-items: center;
+  justify-content: center;
+  line-height: 2rem;
+  z-index: 3;
+}
 .play ul li {
   display: flex;
   vertical-align: middle;
@@ -107,42 +136,40 @@ img {
   padding: 10px;
   border-radius: 6px;
   z-index: 5;
+  transition: all ease 0.3s;
 }
 
-.play ul .item:hover {
-  background-color: #41443a;
-}
-
-#cicle {
-  position: relative;
-  background-color: #2f3237;
-  border-radius: 50%;
-  width: 32vw;
-  height: 32vw;
-  top: -20%;
-  left: 37%;
-  z-index: -1;
-  margin: -60%;
-  margin-top: -78%;  
-}
-
-.top h3, .top img {
-  display: flex;
-}
-.top {
-  display: flex;
-  flex-direction: column;
-  z-index: 9;
-}
-
-.play ul svg{
+.play ul svg {
   width: 50px;
   height: auto;
 }
 
-.play {
-  padding: 5%;
-  align-items: center;
+.play ul .item:hover {
+  background-color: #3f4246;
+  transform: translateY(-5px);
+}
+
+.options img {
+  position: relative;
+  width: 4vw;
+  margin-right: 3.5%;
+}
+
+.options .items {
+  display: flex;
+  padding: 0 10%;
+  flex-direction: row;
+  vertical-align: middle;
+  line-height: 1.8rem;
+  width: 100%;
+  margin-top: 4vh;
+  transition: all ease 0.3s;
   justify-content: center;
-  line-height: 2rem;
+  align-items: center;
+  padding: 1vh 1.5vw;
+}
+
+.options .items:hover {
+  background-color: #3f4246;
+  transform: translateY(-5px);
 }

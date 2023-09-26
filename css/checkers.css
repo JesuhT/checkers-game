@@ -6,7 +6,7 @@
 .cell {
     width: 60px;
     height: 60px;
-    background-color: #eee;
+    background-color: #FFD2A6;
     background-image: url(../assets/img/square.jpg);
     border: 3px solid rgba(168, 130, 24, 0.216);
     background-size: cover;
@@ -15,7 +15,6 @@
     vertical-align: middle;
     cursor: pointer;
     background-size: cover;
-    filter: brightness(90%);
     align-items: center;
     justify-content: center;
 }
@@ -29,16 +28,17 @@
     background-image: url(../assets/img/square.jpg);
     background-size: cover;
     background-position: center;
+    margin: auto;
 }
 .black {
-    background-image: url(../assets/img/square-black.jpg);
+   background-image: url(../assets/img/square-black.jpg);
+    background-color: #A85D5D;
     background-size: cover;
     background-position: center;
 }
 
 .blackpiece {
     background-image: url(../assets/img/piece-black.svg);
-    border: 2px solid rgba(128, 111, 20, 0.616);
     background-size: cover;
     background-position: center;
     animation: all ease 0.3s;
@@ -46,7 +46,6 @@
 
 .red {
     background-image: url(../assets/img/piece.svg);
-    border: 2px solid rgba(128, 111, 20, 0.616);
     animation: all ease 0.3s;
     background-size: cover;
     background-position: center;
@@ -56,14 +55,13 @@
     background-image: url(../assets/img/king-piece.svg);
     background-size: cover;
     background-position: center;
-    border: 2px solid rgba(128, 111, 20, 0.616);
     animation: all ease 0.3s;
 }
 .kingblack {
     background-image: url(../assets/img/king-piece-black.svg);
     background-size: cover;
     background-position: center;
-    border: 2px solid rgba(128, 111, 20, 0.616);
+    border: 3px solid rgba(165, 130, 130, 0.3);
     animation: all ease 0.3s;
     filter: grayscale(70%);
 }
