@@ -281,7 +281,7 @@ $(document).ready(function () {
   });
   const main=$('#main');
   function checkForWinner() {
-    if (redPlayerFichas ) {
+    if (redPlayerFichas ===0 ) {
       // El jugador negro ha ganado
       const gameOverMessage = $('<div class="game-over"><div class="box-reset">¡El jugador <span style="color: #3e4147;" > negro</span> ha ganado! Haga clic en reiniciar para jugar de nuevo.<div id="restart-button">Reiniciar</div></div></div>');
       $('body').append(gameOverMessage);
@@ -292,7 +292,7 @@ $(document).ready(function () {
         window.dispatchEvent(evento);
         location.reload();
       });
-    } else if (blackPlayerFichas ) {
+    } else if (blackPlayerFichas === 0) {
       // El jugador rojo ha ganado
       const gameOverMessage = $('<div class="game-over"><div class="box-reset">¡El jugador <span style="color:red;"> rojo</span> ha ganado! Haga clic en reiniciar para jugar de nuevo.<br><div id="restart-button">Reiniciar</div></div></div>');
       const reset = main.find('#restart-button');
