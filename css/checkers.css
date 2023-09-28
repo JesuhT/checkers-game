@@ -149,3 +149,28 @@
     background-color: #a53f3f;
     transform: translateY(-5px);
   }
+
+  
+#restart-button2 {
+  display: flex;
+  vertical-align: middle;
+  background-color: #2f3237;
+  line-height: 1.8rem;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  z-index: 5;
+  border: none;
+  text-align: center;
+  justify-content: center;
+  font-size: 18px;
+  border-radius: 10px;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  background-color: #a73232;
+}
+
+#restart-button2:hover {
+    background-color: #a53f3f;
+    transform: translateY(-5px);
+  }

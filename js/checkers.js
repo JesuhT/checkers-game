@@ -283,24 +283,25 @@ $(document).ready(function () {
   function checkForWinner() {
     if (redPlayerFichas ===0 ) {
       // El jugador negro ha ganado
-      const gameOverMessage = $('<div class="game-over"><div class="box-reset">¡El jugador <span style="color: #3e4147;" > negro</span> ha ganado! Haga clic en reiniciar para jugar de nuevo.<div id="restart-button">Reiniciar</div></div></div>');
+      const gameOverMessage = $('<div class="game-over"><div class="box-reset">¡El jugador <span style="color: black;" > negro</span> ha ganado! Haga clic en reiniciar para jugar de nuevo.<div id="restart-button">Reiniciar</div></div></div>');
       $('body').append(gameOverMessage);
-      const reset = main.find('#restart-button');
+      const reset = $('#restart-button');
       reset.on('click', function () {
         console.log("click en reset");
         var evento = new Event('nombreDelEvento');
         window.dispatchEvent(evento);
         location.reload();
       });
-    } else if (blackPlayerFichas === 0) {
+    } else if (blackPlayerFichas ) {
       // El jugador rojo ha ganado
-      const gameOverMessage = $('<div class="game-over"><div class="box-reset">¡El jugador <span style="color:red;"> rojo</span> ha ganado! Haga clic en reiniciar para jugar de nuevo.<br><div id="restart-button">Reiniciar</div></div></div>');
-      const reset = main.find('#restart-button');
+      const gameOverMessage = $('<div class="game-over"><div class="box-reset">¡El jugador <span style="color:red;"> rojo</span> ha ganado! Haga clic en reiniciar para jugar de nuevo.<br><div id="restart-button2">Reiniciar</div></div></div>');
       $('body').append(gameOverMessage);
+      const reset = $('#restart-button2');
+      
       reset.on('click', function () {
-        console.log("click en reset");
-        var evento = new Event('nombreDelEvento');
-        window.dispatchEvent(evento);
+        console.log("click en reset 21");
+        var evento2 = new Event('nombreDelEvento2');
+        window.dispatchEvent(evento2);
         location.reload();
       });
     }
