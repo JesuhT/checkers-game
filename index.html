@@ -7,6 +7,8 @@
   <title>Juegos</title>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/mainpage.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/mainpage.js"></script>
 </head>
 
 <body>
@@ -16,31 +18,31 @@
       <ul class="options">
         <li class="items">
           <div class="box-icon">
-          <img src="assets/svg/home.svg" alt="Home" srcset="">
+            <img src="assets/svg/home.svg" alt="Home" srcset="">
           </div>
           <h3>Home</h3>
         </li>
         <li class="items">
           <div class="box-icon">
-          <img src="assets/svg/playcheckers.svg" alt="" srcset="">
+            <img src="assets/svg/playcheckers.svg" alt="" srcset="">
           </div>
           <h3>Play</h3>
         </li>
         <li class="items">
           <div class="box-icon">
-          <img src="assets/svg/learn.png" alt="" srcset="">
+            <img src="assets/svg/learn.png" alt="" srcset="">
           </div>
           <h3>Learn</h3>
         </li>
         <li class="items">
           <div class="box-icon">
-          <img src="assets/svg/watch.svg" alt="Watch" srcset="">
+            <img src="assets/svg/watch.svg" alt="Watch" srcset="">
           </div>
           <h3>Watch</h3>
         </li>
         <li class="items">
           <div class="box-icon">
-          <img src="assets/svg/social.svg" alt="socials">
+            <img src="assets/svg/social.svg" alt="socials">
           </div>
           <h3>Social</h3>
         </li>
@@ -58,7 +60,7 @@
             <h3>Oponent</h3>
           </div>
           <div class="box">
-            <iframe src="checkers.html" frameborder="0" width="600" height="550"></iframe>
+            <iframe id="checkers" src="checkers.html" frameborder="0" width="600" height="550"></iframe>
           </div>
           <div class="pf-player you">
             <img class="pfp" src="assets/img/pfp.png" alt="pfp" srcset="">
@@ -69,13 +71,12 @@
       <div class="container-play">
         <div id="cicle"></div>
         <div class="play">
-          
           <div class="top">
             <h1>Play checker</h1>
             <img src="assets/svg/playwhite.svg" alt="" srcset="">
           </div>
           <ul>
-            <li class="item">
+            <li id="play" class="item">
               <svg class="icono" width="90" height="90" fill="none" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 94 94">
                 <path
@@ -88,7 +89,7 @@
               </svg>
               <h2>Play Online</h2>
             </li>
-            <li class="item">
+            <li id="computer" class="item">
               <svg width="90" height="90" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94 94">
                 <path d="M53.23 47.38H36.77V59.3h16.46V47.38z" fill="#486688" />
                 <path
@@ -167,12 +168,29 @@
               </svg>
               <h2>Play with friend</h2>
             </li>
+            <label class="time" for="time">Tiempo de juego:</label>
+            <li class="time" id="time">
+              
+              <select class="time" name="time">
+                <option value="2min">2 minutes</option>
+                <option value="3min">3 minutes</option>
+                <option value="5min">5 minutes</option>
+                <option value="10min">10 minutes</option>
+              </select>
+            </li>
+            <li class="color item" id="gamestart">
+              <h2>Start</h2>
+            </li>
+            <li id="cancel" class="color red item">
+              <h2>Cancel</h2>
+            </li>
           </ul>
         </div>
       </div>
       <div class="left"></div>
     </div>
   </main>
+
 </body>
 
 </html>
