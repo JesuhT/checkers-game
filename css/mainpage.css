@@ -16,9 +16,11 @@ body {
 }
 
 nav {
+  display: flex;
   width: max-content;
   height: 100vh;
   background-color: #2f3237;
+  vertical-align: middle;
 }
 
 main {
@@ -30,6 +32,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  vertical-align: middle;
   line-height: 1.5rem;
   width: 100%;
 }
@@ -137,6 +140,7 @@ img {
   border-radius: 6px;
   z-index: 5;
   transition: all ease 0.3s;
+  cursor: pointer;
 }
 
 .play ul svg {
@@ -151,8 +155,9 @@ img {
 
 .options img {
   position: relative;
-  width: 4vw;
+  width: 3.8vw;
   margin-right: 3.5%;
+  height: auto;
 }
 
 .options .items {
@@ -162,14 +167,22 @@ img {
   vertical-align: middle;
   line-height: 1.8rem;
   width: 100%;
-  margin-top: 4vh;
+  margin-top: 2vh;
   transition: all ease 0.3s;
   justify-content: center;
   align-items: center;
   padding: 1vh 1.5vw;
+  text-align: left;
+  cursor: pointer;
 }
-
+.options .items:first-child {
+  margin: 0;
+}
 .options .items:hover {
   background-color: #3f4246;
   transform: translateY(-5px);
+}
+
+.box-icon {
+  width: 5vw;
 }

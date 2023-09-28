@@ -29,6 +29,7 @@
     background-size: cover;
     background-position: center;
     margin: auto;
+    border: 3px solid rgba(161, 65, 27, 0.3);
 }
 .black {
    background-image: url(../assets/img/square-black.jpg);
@@ -42,6 +43,7 @@
     background-size: cover;
     background-position: center;
     animation: all ease 0.3s;
+    border: 3px solid rgba(58, 24, 10, 0.123);
 }
 
 .red {
@@ -49,19 +51,21 @@
     animation: all ease 0.3s;
     background-size: cover;
     background-position: center;
+    border: 3px solid rgba(161, 65, 27, 0.3);
 }
  /* Estilos de las fichas coronadas */
  .king {
     background-image: url(../assets/img/king-piece.svg);
     background-size: cover;
     background-position: center;
+    border: 3px solid rgba(161, 65, 27, 0.3);
     animation: all ease 0.3s;
 }
 .kingblack {
     background-image: url(../assets/img/king-piece-black.svg);
     background-size: cover;
     background-position: center;
-    border: 3px solid rgba(165, 130, 130, 0.3);
+    border: 3px solid rgba(58, 24, 10, 0.123);
     animation: all ease 0.3s;
     filter: grayscale(70%);
 }
