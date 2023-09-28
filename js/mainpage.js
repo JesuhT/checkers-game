@@ -1,13 +1,27 @@
 $(document).ready(function () {
+    const body = $('#body');
     const iframe = $('#checkers');
     const time = $('.time');
     const start = $('#gamestart');
     const cancel = $('#cancel');
     const play = $('#play');
+    const playbox = $('#play-box');
+    const msg = $('#message');
+    const ok = $('#ok');
+    const gsmall = $('#green-small');
+    gsmall.addClass('unclickable');
     iframe.addClass('unclickable');
+    playbox.addClass('unclickable');
     time.hide();
     start.hide();
     cancel.hide();
+
+    ok.on('click', function () {
+        msg.fadeOut(10);
+
+        playbox.removeClass('unclickable');
+
+    })
     var clicked = false;
     $('#play').on('click', function () {
 
@@ -36,6 +50,7 @@ $(document).ready(function () {
         start.hide();
         cancel.show();
         play.addClass('unclickable');
+        iframe.removeClass('blur');
     })
     cancel.on('click', function () {
         time.show();
@@ -44,6 +59,7 @@ $(document).ready(function () {
         iframe.addClass('unclickable');
         iframe.attr('src', iframe.attr('src'));
         play.removeClass('unclickable');
+        iframe.addClass('blur');
     })
     function cancelar() {
         time.show();
@@ -55,6 +71,6 @@ $(document).ready(function () {
     }
     window.addEventListener('nombreDelEvento', function () {
         cancelar();
-      });
+    });
 
 });

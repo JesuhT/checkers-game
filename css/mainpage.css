@@ -195,12 +195,66 @@ img {
   transition: none;
 }
 
-#gamestart {
+#gamestart, .green {
   display: flex;
   background-color: #3edd29b7;
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+
+#message {
+  position: absolute;
+  width: 30%;
+  height: 50%;
+  margin: 0;
+  left: 25%;
+  top: 15%;
+  border-radius: 20px;
+  background-color: #3d4552;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+#green-small {
+  position: relative;
+  display: inline;
+  width: 5vw;
+  height: auto;
+  font-size: 8px;
+  border: none;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: #3edd29b7;
+}
+#ok {
+  margin-top: 10vh;
+  width: 12vw;
+  height: 7vh;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+
+.redt {
+  font-size: 40px;
+  display: block;
+  color: #f82e2ee8;
+  margin: 0;
+}
+
+#ok:hover {
+  transform: translateY(-5px);
+}
+
+.blur {
+  filter: blur(2px);
 }
 
 .time {
