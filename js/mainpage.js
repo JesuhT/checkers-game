@@ -10,22 +10,22 @@ $(document).ready(function () {
     cancel.hide();
     var clicked = false;
     $('#play').on('click', function () {
-        
+
         if (!clicked) {
             $('.top').hide();
             $('.item').hide();
             play.show();
             time.show();
             start.show();
-            clicked=true;
+            clicked = true;
         } else {
             $('.top').show();
             $('.item').show();
-            
+
             time.hide();
             start.hide();
             cancel.hide();
-            clicked=false;
+            clicked = false;
         }
 
     })
@@ -45,5 +45,16 @@ $(document).ready(function () {
         iframe.attr('src', iframe.attr('src'));
         play.removeClass('unclickable');
     })
+    function cancelar() {
+        time.show();
+        start.show();
+        cancel.hide();
+        iframe.addClass('unclickable');
+        iframe.attr('src', iframe.attr('src'));
+        play.removeClass('unclickable');
+    }
+    window.addEventListener('nombreDelEvento', function () {
+        cancelar();
+      });
 
-})
+});

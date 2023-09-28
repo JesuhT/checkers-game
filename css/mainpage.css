@@ -174,13 +174,16 @@ img {
   padding: 1vh 1.5vw;
   text-align: left;
   cursor: pointer;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .options .items:first-child {
   margin: 0;
 }
 .options .items:hover {
-  background-color: #3f4246;
+  background-color: #4d5055;
   transform: translateY(-5px);
+  transform: translatex(7px);
 }
 
 .box-icon {

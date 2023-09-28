@@ -1,89 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
+  font-weight: 700;
+  list-style: none;
+  color: white;
+}
 .board {
-    display: grid;
-    grid-template-columns: repeat(8, 65px);
+  display: grid;
+  grid-template-columns: repeat(8, 65px);
 }
 .cell {
-    width: 60px;
-    height: 60px;
-    background-color: #FFD2A6;
-    background-image: url(../assets/img/square.jpg);
-    border: 3px solid rgba(168, 130, 24, 0.216);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    background-size: cover;
-    align-items: center;
-    justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #ffd2a6;
+  background-image: url(../assets/img/square.jpg);
+  border: 3px solid rgba(168, 130, 24, 0.216);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
 }
 .piece {
-    display: flex;
-    position: relative;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    background-image: url(../assets/img/square.jpg);
-    background-size: cover;
-    background-position: center;
-    margin: auto;
-    border: 3px solid rgba(161, 65, 27, 0.3);
+  display: flex;
+  position: relative;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-image: url(../assets/img/square.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  border: 3px solid rgba(161, 65, 27, 0.3);
 }
 .black {
-   background-image: url(../assets/img/square-black.jpg);
-    background-color: #A85D5D;
-    background-size: cover;
-    background-position: center;
+  background-image: url(../assets/img/square-black.jpg);
+  background-color: #a85d5d;
+  background-size: cover;
+  background-position: center;
 }
 
 .blackpiece {
-    background-image: url(../assets/img/piece-black.svg);
-    background-size: cover;
-    background-position: center;
-    animation: all ease 0.3s;
-    border: 3px solid rgba(58, 24, 10, 0.123);
+  background-image: url(../assets/img/piece-black.svg);
+  background-size: cover;
+  background-position: center;
+  animation: all ease 0.3s;
+  border: 3px solid rgba(58, 24, 10, 0.123);
 }
 
 .red {
-    background-image: url(../assets/img/piece.svg);
-    animation: all ease 0.3s;
-    background-size: cover;
-    background-position: center;
-    border: 3px solid rgba(161, 65, 27, 0.3);
+  background-image: url(../assets/img/piece.svg);
+  animation: all ease 0.3s;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid rgba(161, 65, 27, 0.3);
 }
- /* Estilos de las fichas coronadas */
- .king {
-    background-image: url(../assets/img/king-piece.svg);
-    background-size: cover;
-    background-position: center;
-    border: 3px solid rgba(161, 65, 27, 0.3);
-    animation: all ease 0.3s;
+/* Estilos de las fichas coronadas */
+.king {
+  background-image: url(../assets/img/king-piece.svg);
+  background-size: cover;
+  background-position: center;
+  border: 3px solid rgba(161, 65, 27, 0.3);
+  animation: all ease 0.3s;
 }
 .kingblack {
-    background-image: url(../assets/img/king-piece-black.svg);
-    background-size: cover;
-    background-position: center;
-    border: 3px solid rgba(58, 24, 10, 0.123);
-    animation: all ease 0.3s;
-    filter: grayscale(70%);
+  background-image: url(../assets/img/king-piece-black.svg);
+  background-size: cover;
+  background-position: center;
+  border: 3px solid rgba(58, 24, 10, 0.123);
+  animation: all ease 0.3s;
+  filter: grayscale(70%);
 }
 
 .selected {
-    border-color: white;
-    transition: all ease 0.1s;
+  border-color: white;
+  transition: all ease 0.1s;
 }
 
 .highlight {
-    width: 1px;
-    height: 1px;
-    border-radius: 50%;
-    background-image: url(../assets/img/x.svg);
-    filter: opacity(0.8);
-    background-position: center;
-    display: flex;
-    padding: 17px;
-    margin: 17px;
-    animation: all ease 1s;
-    }
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background-image: url(../assets/img/x.svg);
+  filter: opacity(0.8);
+  background-position: center;
+  display: flex;
+  padding: 17px;
+  margin: 17px;
+  animation: all ease 1s;
+}
+
+.game-over {
+  position: absolute;
+  background-color: #2f3237;
+  left: 10%;
+  top: 10%;
+  width: 40%;
+  height: 40%;
+  padding: 15%;
+  align-items: center;
+  justify-content: center;
+  line-height: 2rem;
+  z-index: 3;
+  font-size: 20px;
+  border-radius: 16px;
+}
+.box-reset {
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+  line-height: 1.8rem;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  z-index: 5;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+#restart-button {
+  display: flex;
+  vertical-align: middle;
+  background-color: #2f3237;
+  line-height: 1.8rem;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  z-index: 5;
+  border: none;
+  text-align: center;
+  justify-content: center;
+  font-size: 18px;
+  border-radius: 10px;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  background-color: #a73232;
+}
+
+#restart-button:hover {
+    background-color: #a53f3f;
+    transform: translateY(-5px);
+  }

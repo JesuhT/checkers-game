@@ -1,5 +1,7 @@
 $(document).ready(function () {
   const board = $('#board');
+  let redPlayerFichas = 12;
+  let blackPlayerFichas = 12;
 
   // Crea las casillas del tablero
   for (let row = 0; row < 8; row++) {
@@ -13,12 +15,9 @@ $(document).ready(function () {
       if ((row + col) % 2 === 0) {
         cell.addClass('black');
       }
-
       board.append(cell);
     }
   }
-
-
   // Crea las fichas iniciales
   function createPiece(color) {
     return $('<div class="piece ' + color + '"></div>');
@@ -75,7 +74,6 @@ $(document).ready(function () {
           { row: row + 1, col: col + 1 }//enfrente derecha
         ];
         for (const diagonal of diagonalsblack) {
-          // const cell = board.find('.cell').eq(diagonal.row * 8 + diagonal.col);
           const diagonalCell = board.find('.cell').filter(function () {
             return $(this).data('row') === diagonal.row && $(this).data('col') === diagonal.col;
           });
@@ -134,10 +132,8 @@ $(document).ready(function () {
                   console.log("deberia");
                 }
               }
-
             }
           }
-
         }
       }
     } else {
@@ -205,9 +201,7 @@ $(document).ready(function () {
                   nextCell.append('<div class="highlight" style="z-index:999;"></div>');
                   console.log("deberia");
                 }
-
               }
-
             }
           }
         }
@@ -243,6 +237,15 @@ $(document).ready(function () {
           const jumpedPiece = jumpedCell.find('.piece');
           capture.play();
           jumpedPiece.remove();
+          // Después de eliminar una ficha del tablero
+          if (selectedPiece.hasClass('red')) {
+            blackPlayerFichas--; // Decrementa el contador de fichas negras
+            checkForWinner();
+          } else if (selectedPiece.hasClass('blackpiece')) {
+            redPlayerFichas--; // Decrementa el contador de fichas rojas
+            checkForWinner();
+          }
+
           console.log('Condición cumplida');
         }
       } else {
@@ -276,4 +279,33 @@ $(document).ready(function () {
       $('.highlight').remove();
     }
   });
+  const main=$('#main');
+  function checkForWinner() {
+    if (redPlayerFichas ) {
+      // El jugador negro ha ganado
+      const gameOverMessage = $('<div class="game-over"><div class="box-reset">¡El jugador <span style="color: #3e4147;" > negro</span> ha ganado! Haga clic en reiniciar para jugar de nuevo.<div id="restart-button">Reiniciar</div></div></div>');
+      $('body').append(gameOverMessage);
+      const reset = main.find('#restart-button');
+      reset.on('click', function () {
+        console.log("click en reset");
+        var evento = new Event('nombreDelEvento');
+        window.dispatchEvent(evento);
+        location.reload();
+      });
+    } else if (blackPlayerFichas ) {
+      // El jugador rojo ha ganado
+      const gameOverMessage = $('<div class="game-over"><div class="box-reset">¡El jugador <span style="color:red;"> rojo</span> ha ganado! Haga clic en reiniciar para jugar de nuevo.<br><div id="restart-button">Reiniciar</div></div></div>');
+      const reset = main.find('#restart-button');
+      $('body').append(gameOverMessage);
+      reset.on('click', function () {
+        console.log("click en reset");
+        var evento = new Event('nombreDelEvento');
+        window.dispatchEvent(evento);
+        location.reload();
+      });
+    }
+  }
+  
+
+
 });
