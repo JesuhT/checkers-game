@@ -35,7 +35,10 @@ $(document).ready(function () {
   // Lógica para el movimiento de fichas
   let currentPlayer = 'red';
   let selectedPiece = null;
-
+  
+  let highlightplayero =$('#oponent');
+  let highlightplayery =$('#you');
+  highlightplayery.addClass('player-selected');
   // CLic a las fichas
   $('.piece').on('click', function () {
     // Verificar si es el turno del jugador actual
@@ -44,6 +47,7 @@ $(document).ready(function () {
       if (selectedPiece) {
         selectedPiece.removeClass('selected');
         selectedPiece = null;
+        highlightplayer.removeClass('selected');
         // Eliminar elementos circulares de las casillas disponibles
         $('.highlight').remove();
       }
@@ -52,7 +56,7 @@ $(document).ready(function () {
       selectedPiece = $(this);
       lastpiece = selectedPiece;
       selectedPiece.addClass('selected');
-
+      
       // Mostrar casillas disponibles
       showAvailableMoves(selectedPiece);
     }
@@ -272,11 +276,19 @@ $(document).ready(function () {
       // Deseleccionar la ficha
       selectedPiece.removeClass('selected');
       selectedPiece = null;
-      //Buscar la ficha intermedia
+      //Highlight player
+      if(currentPlayer==='blackpiece'){
+        highlightplayery.addClass('player-selected');
+        highlightplayero.removeClass('player-selected');
+      }else {
+        highlightplayery.removeClass('player-selected');
+        highlightplayero.addClass('player-selected');
+      }
       // Cambiar el turno del jugador
       currentPlayer = currentPlayer === 'blackpiece' ? 'red' : 'blackpiece';
       // Eliminar elementos circulares de las casillas disponibles
       $('.highlight').remove();
+      
     }
   });
   const main=$('#main');
@@ -292,7 +304,7 @@ $(document).ready(function () {
         window.dispatchEvent(evento);
         location.reload();
       });
-    } else if (blackPlayerFichas ) {
+    } else if (blackPlayerFichas===0 ) {
       // El jugador rojo ha ganado
       const gameOverMessage = $('<div class="game-over"><div class="box-reset">¡El jugador <span style="color:red;"> rojo</span> ha ganado! Haga clic en reiniciar para jugar de nuevo.<br><div id="restart-button2">Reiniciar</div></div></div>');
       $('body').append(gameOverMessage);

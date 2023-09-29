@@ -11,13 +11,22 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/mainpage.js"></script>
     <script src="js/checkers.js"></script>
-    
+
 
 </head>
 
 <body id="main">
+    <div class="pf-player" id="oponent">
+        <img class="pfp" src="assets/img/pfp.png" alt="pfp" srcset="">
+        <h3>Oponent</h3>
+    </div>
+
     <div class="board" id="board"></div>
 
+    <div class="pf-player" id="you">
+        <img class="pfp" src="assets/img/pfp.png" alt="pfp" srcset="">
+        <h3>You</h3>
+    </div>
     <audio id="move" src="assets/sound/move-self.mp3"></audio>
     <audio id="capture" src="assets/sound/capture.mp3"></audio>
     <audio id="promote" src="assets/sound/promote.mp3"></audio>

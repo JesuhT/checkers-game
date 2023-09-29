@@ -63,24 +63,6 @@ main {
   line-height: 1.4rem;
 }
 
-.pf-player {
-  display: flex;
-  padding-left: 1vw;
-}
-
-.pf-player h3 {
-  color: white;
-  font-size: 1rem;
-  margin-left: 10px;
-  font-weight: 500;
-}
-
-.pfp {
-  width: 3vw;
-  border-radius: 50%;
-  filter: invert(100%);
-}
-
 img {
   width: 90px;
 }
