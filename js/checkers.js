@@ -233,13 +233,21 @@ $(document).ready(function () {
     const jumpedCell = board.find('.cell').filter(function () {
       return $(this).data('row') === jumpedRow && $(this).data('col') === jumpedCol;
     });
+    //sonido si hay piezas
+    if(jumpedCell.children().hasClass('piece')) {
+      if ((selectedPiece.hasClass('red') && jumpedCell.children().hasClass('blackpiece')) || (selectedPiece.hasClass('blackpiece') && jumpedCell.children().hasClass('red'))) {
+        if ($(this).children().hasClass('highlight')) {
+        capture.play();
+      }
+    }} else {
+      mover.play();
+    }
     //comprobar que si haya piezas
     if (jumpedCell.children().hasClass('piece')) {
       if ((selectedPiece.hasClass('red') && jumpedCell.children().hasClass('blackpiece')) || (selectedPiece.hasClass('blackpiece') && jumpedCell.children().hasClass('red'))) {
         //Comprobar que no sean los mismos antes
         if ($(this).children().hasClass('highlight')) {//Comprobar que si haya una highlight para matar
           const jumpedPiece = jumpedCell.find('.piece');
-          capture.play();
           jumpedPiece.remove();
           // Después de eliminar una ficha del tablero
           if (selectedPiece.hasClass('red')) {
@@ -261,18 +269,19 @@ $(document).ready(function () {
       targetCell.append(selectedPiece);
       // Reproduce el sonido
 
-      mover.play();
+      if ((targetRow === 0 && !selectedPiece.hasClass('king'))||(targetRow === 7 && !selectedPiece.hasClass('kingblack'))){
+        setTimeout(function () {
+          promote.play();
+        }, 50);
+      } 
       if (selectedPiece.hasClass('red')) {
         if (targetRow === 0 && !selectedPiece.hasClass('king')) {
-          promote.play();
           selectedPiece.addClass('king');
         }
-      } else {
-        if (targetRow === 7 && !selectedPiece.hasClass('kingblack')) {
+      } else if (targetRow === 7 && !selectedPiece.hasClass('kingblack')) {
           selectedPiece.addClass('kingblack');
-          promote.play();
-        }
       }
+      
       // Deseleccionar la ficha
       selectedPiece.removeClass('selected');
       selectedPiece = null;
