@@ -47,7 +47,6 @@ $(document).ready(function () {
       if (selectedPiece) {
         selectedPiece.removeClass('selected');
         selectedPiece = null;
-        highlightplayer.removeClass('selected');
         // Eliminar elementos circulares de las casillas disponibles
         $('.highlight').remove();
       }
@@ -239,7 +238,7 @@ $(document).ready(function () {
         if ($(this).children().hasClass('highlight')) {
         capture.play();
       }
-    }} else {
+    }} else if(targetCell.children().hasClass('highlight')) {
       mover.play();
     }
     //comprobar que si haya piezas
@@ -281,7 +280,6 @@ $(document).ready(function () {
       } else if (targetRow === 7 && !selectedPiece.hasClass('kingblack')) {
           selectedPiece.addClass('kingblack');
       }
-      
       // Deseleccionar la ficha
       selectedPiece.removeClass('selected');
       selectedPiece = null;
